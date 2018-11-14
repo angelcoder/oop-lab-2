@@ -75,6 +75,7 @@ std::string deletePoint(std::string s) {
         s.erase(s.find("."), 1);
     return s;
 }
+
 LongDouble LongDouble::doubleResize(int x) {
     std::string str = std::string(*this);
     int pos = str.find_first_of(".,") + x;

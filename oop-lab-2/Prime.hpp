@@ -19,4 +19,5 @@ bool   Rabin_Miller(ll p);
 bool   Lucas_Lehmer(ll p);
 bool   Lehmann(ll p);
 bool   Soloway_Strassen(ll p);
+
 #endif /* Prime_hpp */

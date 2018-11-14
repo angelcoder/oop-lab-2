@@ -85,6 +85,4 @@ public:
     
 };
 
-
-
 #endif /* LongInt_hpp */

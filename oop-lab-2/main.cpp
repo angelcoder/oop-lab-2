@@ -16,6 +16,7 @@ void primeResult (bool test){
     if (!test) std::cout<<"Composite";
     else std::cout << "Prime";
 }
+
 int main() {
     try {
         ll NUMBER = 1;

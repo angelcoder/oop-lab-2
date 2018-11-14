@@ -9,7 +9,6 @@
 #include "LongInt.hpp"
 #include <iostream>
 #include <algorithm>
-#include <stdexcept>
 #include <vector>
 #include <deque>
 #include <cstdlib>

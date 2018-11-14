@@ -12,7 +12,7 @@
 #include <stdio.h>
 #include "LongInt.hpp"
 #include "Multer.hpp"
-//#include "LongDouble.hpp"
+
 class LongInt;
 
 class Multer {

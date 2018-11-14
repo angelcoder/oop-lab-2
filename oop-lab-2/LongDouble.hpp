@@ -11,6 +11,7 @@
 
 #include <stdio.h>
 #include "LongInt.hpp"
+
 class LongDouble{
 public:
     LongDouble(std::string s="", bool sign_ = true);

@@ -139,6 +139,7 @@ ll J(ll a, ll b){
     } while(a!=0);
     return r;
 }
+
 bool Soloway_Strassen(ll p){
     //basic cheks
     if (p == 2) return true;
