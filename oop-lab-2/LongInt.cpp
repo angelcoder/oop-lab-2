@@ -16,8 +16,6 @@
 #include <list>
 #include <cmath>
 #include "LongDouble.hpp"
-using namespace std;
-
 
 LongInt::LongInt(std::string s, bool sign) {
     this->sign = sign;

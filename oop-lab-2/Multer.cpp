@@ -7,7 +7,6 @@
 //
 
 #include "LongInt.hpp"
-//#include "LongDouble.hpp"
 #include <iostream>
 #include <algorithm>
 #include <stdexcept>

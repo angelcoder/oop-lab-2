@@ -12,8 +12,6 @@
 #include "LongDouble.hpp"
 #include "Prime.hpp"
 
-using namespace std;
-
 void primeResult (bool test){
     if (!test) std::cout<<"Composite";
     else std::cout << "Prime";
@@ -21,79 +19,79 @@ void primeResult (bool test){
 int main() {
     try {
         ll NUMBER = 1;
-        cin >> NUMBER;
+        std::cin >> NUMBER;
         bool test = true;
         
         test = Rabin_Miller(NUMBER);
-        cout << "Rabin_Miller      ";
+        std::cout << "Rabin_Miller      ";
         primeResult (test);
         
         test = Lehmann(NUMBER);
-        cout << "\nLehmannn          ";
+        std::cout << "\nLehmannn          ";
         primeResult (test);
         
         test = Soloway_Strassen(NUMBER);
-        cout << "\nSoloway_Strassen  ";
+        std::cout << "\nSoloway_Strassen  ";
         primeResult (test);
-        cout << endl;
+        std::cout << std::endl;
         //================================================
-        cout << " ==================================\n";
-        string s1, s2;
-        cin >> s1 >> s2;
+        std::cout << " ==================================\n";
+        std::string s1, s2;
+        std::cin >> s1 >> s2;
         LongInt a(s1), b(s2), c(""), sum(""), sub("");
         LongDouble div("");
         sum = a + b;
         sub = a - b;       LongInt::m = new Karatsuba; c = a * b;
-        cout << "Cook division: \n";
+        std::cout << "Cook division: \n";
         div = a / b;
-        cout << "sum = " << string(sum) << endl;
-        cout << "sub = " << string(sub) << endl;
-        cout << "div = " << string(div) << endl;
+        std::cout << "sum = " << std::string(sum) << std::endl;
+        std::cout << "sub = " << std::string(sub) << std::endl;
+        std::cout << "div = " << std::string(div) << std::endl;
         
-        cout << "Multiplication string: \n";
+        std::cout << "Multiplication string: \n";
         
         LongInt::m = new Karatsuba;
         c = a * b;
-        cout << "Karatsuba  " << string(c)<<endl;
+        std::cout << "Karatsuba  " << std::string(c)<<std::endl;
         
         LongInt::m = new Strassen;
         c = a * b;
-        cout << "Strassen   " << string(c)<<endl;
+        std::cout << "Strassen   " << std::string(c)<<std::endl;
         
         LongInt::m = new Toom3;
         c = a * b;
-        cout << "Toom3      " << string(c)<<endl;
+        std::cout << "Toom3      " << std::string(c)<<std::endl;
         
         //================================================
-        cout << " ==================================\n";
-        string s;
-        cin >> s;
+        std::cout << " ==================================\n";
+        std::string s;
+        std::cin >> s;
         a = LongInt(s);
-        cout << "1/" << s << "=" << string(a.inverse()) << endl;
+        std::cout << "1/" << s << "=" << std::string(a.inverse()) << std::endl;
         
-        vector<int> v1 = {8,7,6,4,3};
-        vector<int> v2 = {7, 5, 4};
+        std::vector<int> v1 = {8,7,6,4,3};
+        std::vector<int> v2 = {7, 5, 4};
         LongInt av(v1), bv(v2), cv(""), sumv(""), subv("");
         sumv = av + bv;
         subv = av - bv;
-        cout << "sum = " << string(sumv) << endl;
-        cout << "sub = " << string(subv) << endl;
+        std::cout << "sum = " << std::string(sumv) << std::endl;
+        std::cout << "sub = " << std::string(subv) << std::endl;
         
-        cout << "Multiplication vector: \n";
+        std::cout << "Multiplication vector: \n";
         
         LongInt::m = new Karatsuba;
         cv = av * bv;
-        cout << "Karatsuba  " << string(cv)<<endl;
+        std::cout << "Karatsuba  " << std::string(cv)<<std::endl;
         
         LongInt::m = new Toom3;
         cv = av * bv;
-        cout << "Toom3      " << string(cv)<<endl;
+        std::cout << "Toom3      " << std::string(cv)<<std::endl;
         
         LongInt::m = new Strassen;
         cv = av * bv;
-        cout << "Strassen   " << string(cv)<<endl;
+        std::cout << "Strassen   " << std::string(cv)<<std::endl;
         //================================================
-        cout << " ==================================\n";
+        std::cout << " ==================================\n";
         
         
         bool e = 0, ne = 1;
@@ -103,18 +101,18 @@ int main() {
         if (a==b) {e = 1; ne = 0;}
         if (a>=b) {ab = 1;        }
         if (a > b) {aNb = 1; bNa = 0;}
-        cout << "Testing results:" << endl;
+        std::cout << "Testing results:" << std::endl;
         
         
-        cout << "A == B:" << '\t' << e << endl;
-        cout << "A != B:" << '\t' << ne << endl;
-        cout << "A >= B:" << '\t' << ab << endl;
-        cout << "A > B:" << '\t' << aNb << endl;
-        cout << "A <= B:" << '\t' << ba << endl;
-        cout << "A < B:" << '\t' << bNa << endl;
+        std::cout << "A == B:" << '\t' << e << std::endl;
+        std::cout << "A != B:" << '\t' << ne << std::endl;
+        std::cout << "A >= B:" << '\t' << ab << std::endl;
+        std::cout << "A > B:" << '\t' << aNb << std::endl;
+        std::cout << "A <= B:" << '\t' << ba << std::endl;
+        std::cout << "A < B:" << '\t' << bNa << std::endl;
         
     }
-    catch (const invalid_argument &ex){ std::cout << ex.what();}
-    catch (...) { cout << "ERROR! Something is wrong!" << endl;}
+    catch (const std::invalid_argument &ex){ std::cout << ex.what();}
+    catch (...) { std::cout << "ERROR! Something is wrong!" << std::endl;}
     return 0;
 }

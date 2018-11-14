@@ -1,8 +1,8 @@
 //
 //  Prime.cpp
-//  Lab 2 opyty
+//  oop-lab-2
 //
-//  Created by Anhelina Lohvina on 19.10.2018.
+//  Created by Anhelina Lohvina on 25.10.2018.
 //  Copyright © 2018 Anhelina Lohvina. All rights reserved.
 //
 

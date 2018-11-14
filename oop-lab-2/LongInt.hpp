@@ -15,7 +15,7 @@
 #include "Multer.hpp"
 typedef unsigned long ulong;
 //need to fix the sign
-using namespace std;
+
 class LongDouble;
 
 class LongInt {
