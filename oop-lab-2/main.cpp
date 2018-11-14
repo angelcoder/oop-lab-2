@@ -11,7 +11,6 @@
 #include "LongInt.hpp"
 #include "LongDouble.hpp"
 #include "Prime.hpp"
-//#include "LongDouble.hpp"
 
 using namespace std;
 
